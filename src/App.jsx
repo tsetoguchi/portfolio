@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MyNavbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
 import { Commissions } from './components/Commissions/Commissions';
@@ -65,11 +65,8 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/commissions" element={<Commissions />} />
-          <Route path="/Commissions" element={<Navigate to="/commissions" replace />} />
           <Route path="/experience" element={<ExperienceV2 />} />
-          <Route path="/Experience" element={<Navigate to="/experience" replace />} />
           <Route path="/projects" element={<ProjectsV2 />} />
-          <Route path="/Projects" element={<Navigate to="/projects" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
